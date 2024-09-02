@@ -1,4 +1,4 @@
-// src/services/reviewService.ts
+import { v4 as uuidv4 } from 'uuid';
 import ReviewRepository from '../repositories/reviewRepository';
 import { Review } from '../models/reviewModel';
 
@@ -10,6 +10,7 @@ class ReviewService {
   }
 
   public async addReview(review: Review): Promise<void> {
+    review.review_id = uuidv4();
     await this.reviewRepository.addReview(review);
   }
 

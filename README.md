@@ -49,7 +49,7 @@ Following Instructions are common for all the repos
       ```
    * Docker
       ```
-      docker compose up
+      docker compose up --build
       ```
 
 4. The API will be available at Local
@@ -74,6 +74,10 @@ To run the test suite:
 
    ```
    CMD ["npm", "run", "test"]
+   ```
+   Execute the Command
+   ```
+      docker compose up --build
    ```
 
 ## Deployment Notes
